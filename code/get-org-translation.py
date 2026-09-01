@@ -65,7 +65,7 @@ def ask(tokenizer, model, question):
 
 tokenizer, model = load_llm("qwen-instruct")
 
-question = "Write a Python function for matrix multiplication. Return the result as python code only, without any explanation or comments."
+question = "Translate this following Python code to JAX code. Return the result as python code only, without any explanation or comments."
 
 answer = ask(tokenizer, model, question)
 
