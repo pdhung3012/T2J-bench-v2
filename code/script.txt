@@ -3,3 +3,6 @@ python get-tensorflow-folder.py --model qwen-instruct "../datasets/" "../tensorf
 
 python get-compilation-result.py "../jax_qwen_instruct/" --output jax_compile_report.csv
 python get-compilation-result.py "../tensorflow_qwen_instruct/" --output tensorflow_compile_report.csv
+python get-compilation-result-v2.py "../datasets/" "../tensorflow_qwen_instruct/" --output tensorflow_compile_report.csv
+python get-compilation-result-v2.py "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
+python get-compilation-result-v2.py "../datasets/" "../datasets/" --output org_compile_report.csv
