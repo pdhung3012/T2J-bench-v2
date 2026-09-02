@@ -1,0 +1,31 @@
+import tensorflow as tf
+from tensorflow.keras.layers import Activation, Dense
+
+class Model(tf.keras.Model):
+    """
+    Simple model that performs a Swish activation.
+    """
+    def __init__(self):
+        super(Model, self).__init__()
+    
+    def call(self, inputs):
+        """
+        Applies Swish activation to the input tensor.
+
+        Args:
+            inputs (tf.Tensor): Input tensor of any shape.
+
+        Returns:
+            tf.Tensor: Output tensor with Swish applied, same shape as input.
+        """
+        return inputs * tf.sigmoid(inputs)
+
+batch_size = 4096
+dim = 393216
+
+def get_inputs():
+    x = tf.random.normal([batch_size, dim])
+    return [x]
+
+def get_init_inputs():
+    return []  # No special initialization inputs needed

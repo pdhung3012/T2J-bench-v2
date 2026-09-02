@@ -1,0 +1,4 @@
+python get-translation-folder.py --model qwen-instruct "../datasets/" "../jax_qwen_instruct/"
+python get-tensorflow-folder.py --model qwen-instruct "../datasets/" "../tensorflow_qwen_instruct/"
+
+python get-compilation-result.py "../jax_qwen_instruct/" --output jax_compile_report.csv
