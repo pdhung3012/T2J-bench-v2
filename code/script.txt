@@ -6,3 +6,8 @@ python get-compilation-result.py "../tensorflow_qwen_instruct/" --output tensorf
 python get-compilation-result-v2.py "../datasets/" "../tensorflow_qwen_instruct/" --output tensorflow_compile_report.csv
 python get-compilation-result-v2.py "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
 python get-compilation-result-v2.py "../datasets/" "../datasets/" --output org_compile_report.csv
+python get-compilation-result-v3.py "../datasets/" "../datasets/" --output org_compile_report.csv
+python get-compilation-result-v3.py "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../tensorflow_qwen_instruct/" --output tensorflow_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../datasets/" --output org_compile_report.csv
