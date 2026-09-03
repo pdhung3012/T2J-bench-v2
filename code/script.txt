@@ -8,6 +8,10 @@ python get-compilation-result-v2.py "../datasets/" "../jax_qwen_instruct/" --out
 python get-compilation-result-v2.py "../datasets/" "../datasets/" --output org_compile_report.csv
 python get-compilation-result-v3.py "../datasets/" "../datasets/" --output org_compile_report.csv
 python get-compilation-result-v3.py "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
-bash get-compile-result.sh "../datasets/" "../jax_qwen_instruct/" --output jax_compile_report.csv
-bash get-compile-result.sh "../datasets/" "../tensorflow_qwen_instruct/" --output tensorflow_compile_report.csv
-bash get-compile-result.sh "../datasets/" "../datasets/" --output org_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../jax_qwen_instruct/" jax_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../tensorflow_qwen_instruct/" tensorflow_compile_report.csv
+bash get-compile-result.sh "../datasets/" "../datasets/" org_compile_report.csv
+
+python count_import_statements.py "../datasets/" --output stat_pack_org.txt
+python count_import_statements.py "../jax_qwen_instruct/" --output stat_pack_jax.txt
+python count_import_statements.py "../tensorflow_qwen_instruct/" --output stat_pack_tensorflow.txt
